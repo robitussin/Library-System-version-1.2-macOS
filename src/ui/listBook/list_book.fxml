@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@../../resources/theme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.listBook.ListBookController">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <TableView fx:id="tableView" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="qtyCol" prefWidth="250.0" text="Total Available" />
+                <TableColumn fx:id="titleCol" prefWidth="250.0" text="Title" />
+                  <TableColumn fx:id="authorCol" prefWidth="250.0" text="Author" />
+                  <TableColumn fx:id="publisherCol" prefWidth="250.0" text="Publisher" />
+              </columns>
+            </TableView>
+         </top>
+      </BorderPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                <Button fx:id="refreshbutton" mnemonicParsing="false" onAction="#refreshButtonHandler" text="Refresh" />
+                  <Button mnemonicParsing="false" onAction="#exitButtonHandler" text="Exit" />
+              </buttons>
+            </ButtonBar>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
